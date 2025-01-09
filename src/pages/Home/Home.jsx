@@ -3,6 +3,11 @@ import { useNavigate } from "react-router-dom";
 import styles from "./Home.module.css";
 import logo from "../../assets/images/logo.png";
 import Button from "../../components/Button/Button";
+import home from "../../assets/images/components/32-home.png"
+import calendar from "../../assets/images/components/32-calender.png"
+import diary from "../../assets/images/components/32-diary.png"
+import quest from "../../assets/images/components/32-quest.png"
+import mypage from "../../assets/images/components/32-mypage.png"
 
 function Home() {
   const navigate = useNavigate();
@@ -13,15 +18,19 @@ function Home() {
 
   return (
     <div className={styles.container}>
-      <img src={logo} alt="SODI" className={styles.image} />
-      <h1 className={styles.header}>SODI</h1>
-      <p className={styles.description}>
-        하루를 정리하고, 나만의 음악으로 완성하는, SODI
-        <br />
-        오늘의 감정과 순간들을 음악으로 기록해보세요. SODI가 함께합니다.
-      </p>
-      <Button onClick={handleButtonClick}>시작하기</Button>
+      <form className={styles.form}>
+        <p className={styles.topLOGO}>
+          <span className={styles.s}>S</span>
+          <span className={styles.o}>O</span>
+          <span className={styles.d}>D</span>
+          <span className={styles.i}>I</span>
+        </p>
+        <div className={styles.topBar}>
+          <h3>홈</h3>
+        </div>
+      </form>
     </div>
+
   );
 }
 

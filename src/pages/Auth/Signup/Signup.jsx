@@ -88,6 +88,7 @@ function SignupPage({ setIsLoggedIn }) {
         <div className={styles.left_button} onClick={prevStep}>
           <img src={left_button} alt="left_button" height="30px" width="30px" />
         </div>
+        
         {step === 1 && (
           <div className={styles.steps}>
             <h2>개인정보를 입력해요</h2>

@@ -1,0 +1,120 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  padding-top: 30px;
+  background-color: #ffffff;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 360px;
+  position: relative;
+}
+
+.progressBar {
+  width: 100%;
+  background-color: #e0e0e0;
+  height: 8px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.progress {
+  height: 100%;
+  background-color: #B1B1B1;
+  width: 25%;
+  transition: width 0.3s ease;
+}
+
+.left_button,
+.right_button {
+  position: absolute;
+  top: 20px;
+  z-index: 1000;
+}
+
+.left_button {
+  left: 5%;
+}
+
+.right_button {
+  right: 5%;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.steps h3 {
+  padding-top: 140px;
+  text-align: center;
+  margin: 0;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 150px;
+}
+
+.stepResult h2 {
+  text-align: left;
+  margin: 0;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 60px;
+  padding-top: 10px;
+  padding-right: 100px;
+}
+
+.steploading p {
+  text-align: center;
+  margin: 0;
+  font-weight: bold;
+  color: #000;
+  padding-top: 100px;
+  margin-bottom: 50px;
+}
+
+.loadingImage {
+  width: 100px;
+  height: 100px;
+  padding-bottom: 120px;
+}
+
+.closeButton {
+  background-color: #B1B1B1;
+  width: 350px;
+  padding: 12px;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s;
+  font-family: 'BMJUA';
+}
+
+.loadingImageSuccess {
+  width: 150px;
+  height: 150px;
+  padding-bottom: 150px;
+}
+
+.clickbutton {
+  width: 100%;
+  background-color: #F2F2F2;
+  text-align: left;
+  margin: 0;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 20px;
+}
