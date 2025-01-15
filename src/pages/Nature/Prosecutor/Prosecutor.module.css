@@ -60,7 +60,7 @@ input[type="range"] {
   padding-top: 140px;
   text-align: center;
   margin: 0;
-  font-weight: bold;
+  /* font-weight: bold; */
   color: #000;
   margin-bottom: 150px;
 }

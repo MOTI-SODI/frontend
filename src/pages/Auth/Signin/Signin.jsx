@@ -41,7 +41,6 @@ function SigninPage({ setIsLoggedIn }) {
             required
             minLength={8}
             maxLength={20}
-            pattern="^[a-zA-Z0-9]*$"
             placeholder="비밀번호"
           />
         </div>

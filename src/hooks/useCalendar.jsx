@@ -8,7 +8,6 @@ const useCalendar = () => {
     day: new Date().getDate(),
   });
 
-  // 달력 생성
   const createCalendar = useCallback(async (userId, noteId, date) => {
     try {
       const response = await axiosInstance.post(

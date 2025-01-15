@@ -7,20 +7,20 @@ const useAuth = () => {
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
 
-  const fetchUserProfile = async () => {
-    try {
-      const response = await axiosInstance.get("/auth/me");
-      setUser(response.data);
-    } catch (error) {
-      setMessage("사용자 프로필을 가져오는데 실패했습니다.");
-    }
-  };
+  // const fetchUserProfile = async () => {
+  //   try {
+  //     const response = await axiosInstance.get("/api/user/me");
+  //     setUser(response.data);
+  //   } catch (error) {
+  //     setMessage("사용자 프로필을 가져오는데 실패했습니다.");
+  //   }
+  // };
 
-  useEffect(() => {
-    if (localStorage.getItem("accessToken")) {
-      fetchUserProfile();
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (localStorage.getItem("accessToken")) {
+  //     fetchUserProfile();
+  //   }
+  // }, []);
 
   const signin = async (email, password, setIsLoggedIn) => {
     try {
@@ -31,10 +31,10 @@ const useAuth = () => {
       localStorage.setItem("refreshToken", response.data.refreshToken);
       setMessage(response.data.message);
       setIsLoggedIn(true);
-      fetchUserProfile();
+      // fetchUserProfile();
       setTimeout(() => {
         setMessage("");
-        navigate("/");
+        navigate("/nature");
       }, 1000);
     } catch (error) {
       setMessage("이메일 또는 비밀번호가 일치하지 않습니다.");
@@ -78,6 +78,63 @@ const useAuth = () => {
     }
   };
 
+  const changeName = async (
+    email, password, name
+  ) => {
+    try {
+      const response = await axiosInstance.post("/api/user/name", {
+        email, password, name
+      });
+      setMessage("이름이 성공적으로 변경되었습니다.");
+      setTimeout(() => {
+        setMessage("");
+        navigate("/");
+      }, 1000);
+      return response.data;
+    } catch (error) {
+      setMessage("이름 변경에 실패했습니다.");
+      throw error;
+    }
+  };
+
+  const changeGender = async (
+    email, password, gender
+  ) => {
+    try {
+      const response = await axiosInstance.post("/api/user/gender", {
+        email, password, gender
+      });
+      setMessage("성별이 성공적으로 변경되었습니다.");
+      setTimeout(() => {
+        setMessage("");
+        navigate("/");
+      }, 1000);
+      return response.data;
+    } catch (error) {
+      setMessage("성별 변경에 실패했습니다.");
+      throw error;
+    }
+  };
+
+  const changeJob = async (
+    email, password, job
+  ) => {
+    try {
+      const response = await axiosInstance.post("/api/user/job", {
+        email, password, job
+      });
+      setMessage("직업이 성공적으로 변경되었습니다.");
+      setTimeout(() => {
+        setMessage("");
+        navigate("/");
+      }, 1000);
+      return response.data;
+    } catch (error) {
+      setMessage("직업 변경에 실패했습니다.");
+      throw error;
+    }
+  };
+
   const refreshToken = async () => {
     try {
       const refresh_token = localStorage.getItem("refreshToken");
@@ -103,6 +160,9 @@ const useAuth = () => {
     signin,
     signup,
     changePassword,
+    changeName,
+    changeGender,
+    changeJob,
     refreshToken,
   };
 };

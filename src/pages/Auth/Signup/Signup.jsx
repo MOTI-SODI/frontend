@@ -67,7 +67,7 @@ function SignupPage({ setIsLoggedIn }) {
     if (step === 4) {
       if (!validateForm()) return;
 
-      signup(email, password, name, phoneAddress, birthDate, gender, job, setIsLoggedIn);
+      signup(email, password, name, birthDate, phoneAddress, gender, job, setIsLoggedIn);
 
       navigate("/signin");
     } else {
@@ -134,9 +134,9 @@ function SignupPage({ setIsLoggedIn }) {
         {step === 2 && (
           <div className={styles.steps}>
             <h2>성별은 무엇인가요?</h2>
-            <button className={styles.clickbutton} onClick={() => { setGender("남자"); nextStep(); }}>남자</button>
-            <button className={styles.clickbutton} onClick={() => { setGender("여자"); nextStep(); }}>여자</button>
-            <button className={styles.clickbutton} onClick={() => { setGender("기타"); nextStep(); }}>기타</button>
+            <button className={styles.clickbutton} onClick={() => { setGender("M"); nextStep(); }}>남자</button>
+            <button className={styles.clickbutton} onClick={() => { setGender("F"); nextStep(); }}>여자</button>
+            <button className={styles.clickbutton} onClick={() => { setGender("O"); nextStep(); }}>기타</button>
           </div>
         )}
         {step === 3 && (

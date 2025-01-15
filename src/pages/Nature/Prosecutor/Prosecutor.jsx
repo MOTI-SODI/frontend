@@ -91,7 +91,7 @@ function NatureProsecutorPage({ setIsProsecutor }) {
 
     if (step === 32) {
       prosecutor(emotionality, extraversion, agreeableness, eonesty, eonscientiousness, open, setIsProsecutor);
-      navigate("/home");
+      navigate("/result");
     } else {
       nextStep();
     }
