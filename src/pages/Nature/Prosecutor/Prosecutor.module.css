@@ -31,7 +31,7 @@
 
 .progress {
   height: 100%;
-  background-color: #B1B1B1;
+  background-color: #b1b1b1;
   width: 25%;
   transition: width 0.3s ease;
 }
@@ -49,19 +49,6 @@
 
 .right_button {
   right: 5%;
-}
-
-input[type="range"] {
-  width: 100%;
-  margin-top: 10px;
-}
-
-.steps h3 {
-  padding-top: 140px;
-  text-align: center;
-  margin: 0;
-  font-weight: bold;
-  color: #000;
 }
 
 .stepResult h2 {
@@ -84,7 +71,7 @@ input[type="range"] {
 }
 
 .closeButton {
-  background-color: #B1B1B1;
+  background-color: #b1b1b1;
   width: 350px;
   padding: 12px;
   color: #fff;
@@ -93,7 +80,7 @@ input[type="range"] {
   cursor: pointer;
   font-size: 20px;
   transition: background-color 0.3s;
-  font-family: 'BMJUA';
+  font-family: "BMJUA";
 }
 
 .loadingImage {
@@ -116,10 +103,32 @@ input[type="range"] {
 
 .clickbutton {
   width: 100%;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   text-align: left;
   margin: 0;
   font-weight: bold;
   color: #000;
   margin-bottom: 20px;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.content h3 {
+  margin: 20px 90px;
+}
+
+.inputGroup {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.steps h3 {
+  padding-top: 140px;
+  text-align: center;
+  margin: 0;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 80px;
 }
