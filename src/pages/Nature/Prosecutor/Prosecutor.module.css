@@ -60,9 +60,8 @@ input[type="range"] {
   padding-top: 140px;
   text-align: center;
   margin: 0;
-  /* font-weight: bold; */
+  font-weight: bold;
   color: #000;
-  margin-bottom: 150px;
 }
 
 .stepResult h2 {
@@ -84,12 +83,6 @@ input[type="range"] {
   margin-bottom: 50px;
 }
 
-.loadingImage {
-  width: 100px;
-  height: 100px;
-  padding-bottom: 120px;
-}
-
 .closeButton {
   background-color: #B1B1B1;
   width: 350px;
@@ -103,9 +96,21 @@ input[type="range"] {
   font-family: 'BMJUA';
 }
 
+.loadingImage {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  display: block;
+}
+
 .loadingImageSuccess {
   width: 150px;
   height: 150px;
+  margin: auto;
+  display: block;
+}
+
+.turn {
   padding-bottom: 150px;
 }
 

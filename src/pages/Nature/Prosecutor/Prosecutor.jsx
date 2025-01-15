@@ -446,6 +446,7 @@ function NatureProsecutorPage({ setIsProsecutor }) {
             <div className={styles.steploading}>
               <p>{loadingText}</p>
               <img src={loading} alt="loading" className={styles.loadingImage} />
+              <div className={styles.turn}></div>
               <button className={styles.closeButton}>결과 확인해요!</button>
             </div>
           </div>
@@ -454,6 +455,7 @@ function NatureProsecutorPage({ setIsProsecutor }) {
           <div className={styles.stepResult}>
             <h2>검사 결과를 확인해 볼까요?</h2>
             <img src={loading_success} alt="loading_success" className={styles.loadingImageSuccess} />
+            <div className={styles.turn}></div>
             <Button type="button" style={{ width: "100%" }} onClick={handleSubmit}>결과 확인해요!</Button>
           </div>
         )}
