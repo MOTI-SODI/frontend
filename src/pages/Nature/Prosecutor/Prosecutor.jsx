@@ -47,12 +47,18 @@ function NatureProsecutorPage({ setIsProsecutor }) {
     setOpen(prevValue => prevValue + value);
     nextStep();
   };
-  
-
 
   const nextStep = () => setStep((prev) => Math.min(prev + 1, totalSteps));
-  const prevStep = () => setStep((prev) => Math.max(prev - 1, 1));
-
+  const prevStep = () => {
+    setStep((prev) => {
+      if (prev === 1) {
+        navigate('/nature');
+        return prev;
+      }
+      return Math.max(prev - 1, 1);
+    });
+  };
+  
   const prosecutor = (emotionality, extraversion, agreeableness, eonesty, eonscientiousness, open, setIsProsecutor) => {};
 
   const [loadingText, setLoadingText] = useState("로딩중.");

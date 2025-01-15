@@ -51,8 +51,16 @@ function SignupPage({ setIsLoggedIn }) {
   };
 
   const nextStep = () => setStep((prev) => Math.min(prev + 1, totalSteps));
-  const prevStep = () => setStep((prev) => Math.max(prev - 1, 1));
-
+  const prevStep = () => {
+    setStep((prev) => {
+      if (prev === 1) {
+        navigate('/signin');
+        return prev;
+      }
+      return Math.max(prev - 1, 1);
+    });
+  };
+  
   const validateForm = () => {
     if (!email || !password) {
       alert("이메일과 비밀번호를 모두 입력해주세요.");
