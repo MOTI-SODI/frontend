@@ -158,7 +158,7 @@ function SignupPage({ setIsLoggedIn }) {
           </div>
         )}
         {step === 4 && (
-          <div>
+          <div className={styles.steps}>
             <h2>계정을 만들어요</h2>
             <div className={styles.inputGroup}>
               <p>이메일</p>
