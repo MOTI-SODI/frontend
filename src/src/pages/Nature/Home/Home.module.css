@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  padding-top: 10vh;
+  background-color: #ffffff;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 360px;
+}
+  
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  
+.home h2 {
+  text-align: center;
+  margin: 0;
+  font-weight: bold;
+  color: #676767;
+  margin-bottom: 150px;
+}
+  
+.logo {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
